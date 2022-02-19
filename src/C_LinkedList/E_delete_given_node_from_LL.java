@@ -1,6 +1,6 @@
 package C_LinkedList;
-//delete a given node from the linked list when only the node to be deleted is given
-//approach: copy the next element to the node and point node.next to the node.next.next
+//delete a given node from the linked list when only the node to be deleted is given. note* head of the linked list is not given
+
 //https://leetcode.com/problems/delete-node-in-a-linked-list/submissions/
 public class E_delete_given_node_from_LL {
 
@@ -18,7 +18,11 @@ public class E_delete_given_node_from_LL {
 	
 	//delete node from the linked list
 	public static void delete(Node<Integer> node){
+		//approach: copy the next element to the node and point node.next to the node.next.next
+		
+		//4->5->1->9->X
 		node.data = node.next.data;
+		//4->5->5->9->X
 		node.next = node.next.next;
 		
 	}
