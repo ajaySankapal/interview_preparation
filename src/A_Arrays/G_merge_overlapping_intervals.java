@@ -44,7 +44,9 @@ public class G_merge_overlapping_intervals {
 			if(interval[0]<=newInterval[1]) { //overlapping
 				
 				//if there is overlapping we need to update the newIntervals end time with max of the intervals end time
+				//here the interval is [1,3] we are updating the end of the interval
 				newInterval[1] = Math.max(newInterval[1], interval[1]);
+				//newInterval will become [1,6] it will updated in list also
 			}else {//no overlapping
 				//if the condition is not true it means there is no overlapping 
 				// in that case the interval itself is our newInterval so we update the newInterval with that interval and add it to our res list
